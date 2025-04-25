@@ -2,7 +2,7 @@ name: Deploy Lambda Function
 #on: [push]
 on: 
    schedule:
-   - cron: '48 13,14 * * *'
+   - cron: '0 14 * * *'
 jobs:
 
   lint:
