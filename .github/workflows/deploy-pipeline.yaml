@@ -36,12 +36,14 @@ jobs:
             python -m pip install --upgrade pip
             if [ -f requirements.txt ]; then pip install -r requirements.txt -t .; fi 
       - name: Zip bundle
-        run: zip -r gitfolder.zip ./my-folder
+        run: zip -r ../${{ github.sha }}.zip .
+      - name: Zip folder list
+        run: ls -R ../${{ github.sha }}
       - name: Archive artifact
         uses: actions/upload-artifact@v4
         with:
           name: zipped-bundle
-          path: gitfolder.zip
+          path: ${{ github.sha }}.zip
   publish:
     runs-on: ubuntu-latest
     needs: build
