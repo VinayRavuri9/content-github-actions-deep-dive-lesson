@@ -1,6 +1,8 @@
 name: Deploy Lambda Function
-on: [push]
-
+#on: [push]
+on: 
+   schedule:
+            - cron: '45 1,13 * * *'
 jobs:
 
   lint:
