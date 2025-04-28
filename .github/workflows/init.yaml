@@ -3,9 +3,9 @@
 name: Placeholder
 
 on: #push 
-   #schedule:
-   #- cron: '50 13,14 * * *'
-   workflow_dispatch:
+   schedule:
+   - cron: '50 13,14 * * *'
+   #workflow_dispatch:
 
 jobs:
   init:
