@@ -2,11 +2,10 @@
 
 name: Placeholder
 
-#on: push
-on: 
-   schedule:
-   - cron: '50 13,14 * * *'
-
+on: #push 
+   #schedule:
+   #- cron: '50 13,14 * * *'
+   workflow_dispatch:
 
 jobs:
   init:
