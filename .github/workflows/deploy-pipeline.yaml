@@ -44,7 +44,7 @@ jobs:
           path: ${{ github.sha }}.zip
   publish:
     runs-on: ubuntu-latest
-    environment: Production
+    environment: UAT
     needs: build
     steps:
       - name: Create release
